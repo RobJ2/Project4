@@ -4,7 +4,7 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-docker build --tag=api .
+docker build --tag=04193007/api .
 # Step 2: 
 docker image ls
 
