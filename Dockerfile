@@ -1,5 +1,6 @@
+# hadolint ignore=DL4000
 FROM python:3.7.3-stretch
-MAINTAINER Jacobs <jacobs.rob60@hotmail.com>
+LABEL maintainer="Jacobs <jacobs.rob60@hotmail.com>"
 # Working Directory
 WORKDIR /app
 
@@ -7,7 +8,7 @@ WORKDIR /app
 COPY . app.py /app/
 
 # Install packages from requirements.txt
-# hadolint ignore=DL3013
+# hadolint ignore=DL3013,DL4000
 RUN pip install --upgrade pip &&\  
 	pip install --trusted-host pypi.python.org -r requirements.txt
 
