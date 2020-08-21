@@ -1,1 +1,34 @@
-<paste log output from Kubernetes-mediated prediction, here>
+Output from Terminal 2:
+
+127.0.0.1 - - [21/Aug/2020 12:01:24] "POST /predict HTTP/1.1" 200 -
+[2020-08-21 12:01:25,378] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-08-21 12:01:25,389] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-08-21 12:01:25,398] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-08-21 12:01:25,401] INFO in app: Output prediction is: [[20.35373177134412]]
+127.0.0.1 - - [21/Aug/2020 12:01:25] "POST /predict HTTP/1.1" 200 -
+
+-----------------------------
+Output from Terminal 1:
+
+NAMESPACE     NAME                                    READY   STATUS    RESTARTS   AGE
+default       api                                     1/1     Running   0          75m
+kube-system   coredns-66bff467f8-hdnww                1/1     Running   0          3h
+kube-system   etcd-ip-10-0-0-106                      1/1     Running   0          3h
+kube-system   kube-apiserver-ip-10-0-0-106            1/1     Running   0          3h
+kube-system   kube-controller-manager-ip-10-0-0-106   1/1     Running   0          3h
+kube-system   kube-proxy-9nzs9                        1/1     Running   0          3h
+kube-system   kube-scheduler-ip-10-0-0-106            1/1     Running   0          3h
+kube-system   storage-provisioner                     1/1     Running   0          3h
+Forwarding from 127.0.0.1:8080 -> 80
+Forwarding from [::1]:8080 -> 80
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+
+
+The 

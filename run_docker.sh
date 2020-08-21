@@ -9,4 +9,4 @@ docker build --tag=04193007/api .
 docker image ls
 
 # Step 3: 
-docker run -p 8000:80 api
+docker run -p 8080:80 api
